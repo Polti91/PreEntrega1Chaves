@@ -5,10 +5,10 @@ import BovedaAzur from "../../assets/imagenes/bovedaazur.jpg"
 import CorteEstrellas from "../../assets/imagenes/cortedeestrellas.jpg"
 import Salones from "../../assets/imagenes/salones.jpg"
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
   return (
     <>
-    <h1 className="text-center">¡Bienvenidos a Mythic Plus!</h1>
+    <h1 className="text-center">{greeting}</h1>
     <section className="container text-center mt-5">
       <div className="row gap-5">
         <div className="card" style={{ width: "18rem" }}>
