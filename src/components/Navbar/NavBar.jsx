@@ -1,4 +1,3 @@
-import React from "react";
 import './NavBar.css';
 import Img1 from '../../assets/imagenes/mythicplus2.png'
 import CartWidget from "../CartWidget/CartWidget";

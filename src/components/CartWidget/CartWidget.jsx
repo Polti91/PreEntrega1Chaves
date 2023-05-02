@@ -1,4 +1,3 @@
-import React from 'react'
 import './CartWidget.css';
 import BagCarrito from '../../assets/imagenes/bag.png'
 const CartWidget = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import "./ItemListContainer.css";
 import SombraLuna from "../../assets/imagenes/sombraluna.jpg";
 import BovedaAzur from "../../assets/imagenes/bovedaazur.jpg"
