@@ -1,12 +1,14 @@
 import React from "react";
 import './NavBar.css';
+import Img1 from '../../assets/imagenes/mythicplus2.png'
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+   
+      <header className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <h1>Mythic Plus</h1>
+          <img src={Img1} alt="Mythic Plus" />
           <button
             className="navbar-toggler"
             type="button"
@@ -18,17 +20,18 @@ const NavBar = () => {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <nav className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav gap-3 ms-5">
               <li className="nav-item">Inicio </li>
               <li className="nav-item">Servicios</li>
-              <li className="nav-item dropdown">Raids</li>
-              <li className="nav-item dropdown">Míticas Plus</li>
+              <li className="nav-item">Raids</li>
+              <li className="nav-item">Míticas Plus</li>
             </ul>
-          </div>
+          </nav>
+          <CartWidget/>
         </div>
-      </nav>
-    </header>
+      </header>
+    
   );
 };
 
