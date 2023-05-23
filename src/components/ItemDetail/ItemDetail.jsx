@@ -4,8 +4,8 @@ import Contador from "../Contador/Contador";
 const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
   return (
     <div className="flexcss">
-      <div className="card m-3" style={{ width: "18rem" }}>
-        <img src={img} className="card-img-top mt-1 imgProducto" alt={nombre} />
+      <div className="card m-3" style={{ width: "19rem" }}>
+        <img src={img} className="card-img-top mt-1 imgProducto mx-auto" alt={nombre} />
         <div className="card-body flex-row m-3">
           <h5 className="card-title text-center">{nombre}</h5>
           <p className="card-text text-center m-1">{description}</p>
