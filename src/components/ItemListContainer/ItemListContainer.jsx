@@ -3,6 +3,7 @@ import SombraLuna from "../../assets/imagenes/sombraluna.jpg";
 import BovedaAzur from "../../assets/imagenes/bovedaazur.jpg"
 import CorteEstrellas from "../../assets/imagenes/cortedeestrellas.jpg"
 import Salones from "../../assets/imagenes/salones.jpg"
+import Contador from "../Contador/Contador";
 
 const ItemListContainer = ({greeting}) => {
   return (
@@ -45,6 +46,7 @@ const ItemListContainer = ({greeting}) => {
           <div className="card-body">
             <h5 className="card-title">Salones del Valor</h5>
             <p className="card-text">Carry +10 +16 y +20</p>
+            <Contador stock={15} inicial={1}/>
             <a href="#" className="btn btn-primary">
               Comprar
             </a>
