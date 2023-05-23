@@ -12,7 +12,7 @@ const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
           <p className="card-text text-center m-1">ID: {id}</p>
           <p className="card-text text-center m-1">Precio: {precio}</p>
           <p className="card-text text-center m-1">Stock {stock}</p>
-          <Contador stockTotal={stock} inicial={1}/>
+          <Contador stockTotal={stock} inicial={1} />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import "./Item.css";
 
-const Item = ({id, nombre, precio, img}) => {
+const Item = ({ id, nombre, precio, img }) => {
   return (
     <div>
       <div className="card m-3" style={{ width: "18rem" }}>
