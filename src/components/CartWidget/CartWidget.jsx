@@ -6,7 +6,7 @@ const CartWidget = () => {
       <div className="flex">
         <img
           className="imagenCarrito"
-          src="../../../public/imagenes/bag.png"
+          src="../imagenes/bag.png"
           alt="Carrito de Compras"
         />
       </div>
