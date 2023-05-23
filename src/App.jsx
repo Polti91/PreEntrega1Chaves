@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/" element={<ItemListContainer greeting="Bienvenidos a Myhitic Dungeon" />} />
           <Route
             exact
             path="/categorias/:categoryId"
