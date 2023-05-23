@@ -14,8 +14,10 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-      <h2>{greeting}</h2>
+      <h2 className="centrado">{greeting}</h2>
+      <div>
       <ItemList productos={productos} />
+      </div>
     </>
   );
 };
