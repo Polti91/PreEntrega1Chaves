@@ -7,10 +7,7 @@ const NavBar = () => {
     <header className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link to="/">
-          <img
-            src="../imagenes/mythicplus2.png"
-            alt="Mythic Plus"
-          />
+          <img src="../imagenes/mythicplus2.png" alt="Mythic Plus" />
         </Link>
         <button
           className="navbar-toggler"
@@ -26,16 +23,24 @@ const NavBar = () => {
         <nav className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav gap-3 ms-5">
             <li className="nav-item">
-              <NavLink to={"/"}>Inicio</NavLink>{" "}
+              <NavLink to={"/"} style={{ textDecoration: "none" }}>
+                Inicio
+              </NavLink>{" "}
             </li>
             <li className="nav-item">
-              <NavLink to={`/categorias/1`}>Míticas Plus</NavLink>
+              <NavLink to={`/categorias/1`} style={{ textDecoration: "none" }}>
+                Míticas Plus
+              </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={`/categorias/2`}>Raids</NavLink>
+              <NavLink to={`/categorias/2`} style={{ textDecoration: "none" }}>
+                Raids
+              </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={`/categorias/3`}>Servicios</NavLink>
+              <NavLink to={`/categorias/3`} style={{ textDecoration: "none" }}>
+                Servicios
+              </NavLink>
             </li>
           </ul>
         </nav>
