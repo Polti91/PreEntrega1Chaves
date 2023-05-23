@@ -8,7 +8,7 @@ const NavBar = () => {
       <div className="container-fluid">
         <Link to="/">
           <img
-            src="../../../public/imagenes/mythicplus2.png"
+            src="../imagenes/mythicplus2.png"
             alt="Mythic Plus"
           />
         </Link>
