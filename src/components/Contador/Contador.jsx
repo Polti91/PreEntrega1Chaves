@@ -1,11 +1,11 @@
 import "./Contador.css";
 import { useState } from "react";
 
-const Contador = ({ stock, inicial }) => {
+const Contador = ({ stockTotal, inicial }) => {
   const [contador, setContador] = useState(inicial);
 
   const aumentarContador = () => {
-    if (contador < stock) {
+    if (contador < stockTotal) {
       setContador(contador + 1);
     }
   };
@@ -21,7 +21,7 @@ const Contador = ({ stock, inicial }) => {
   };
 
   return (
-    <div>
+    <div className="text-center">
       <button onClick={disminuirContador} className="btn btn-primary">
         {" "}
         -{" "}
@@ -33,7 +33,9 @@ const Contador = ({ stock, inicial }) => {
       </button>
       <br />
 
-      <button onClick={adicionar}>Agregar</button>
+      <button onClick={adicionar} className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
+          Agregar al carrito
+        </button>
     </div>
   );
 };
