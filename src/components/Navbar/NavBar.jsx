@@ -1,11 +1,12 @@
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link, NavLink } from "react-router-dom"
 
 const NavBar = () => {
   return (
     <header className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <img src="../../../public/imagenes/mythicplus2.png" alt="Mythic Plus" />
+        <Link to="/"><img src="../../../public/imagenes/mythicplus2.png" alt="Mythic Plus" /></Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,10 +20,10 @@ const NavBar = () => {
         </button>
         <nav className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav gap-3 ms-5">
-            <li className="nav-item">Inicio </li>
-            <li className="nav-item">Servicios</li>
-            <li className="nav-item">Raids</li>
-            <li className="nav-item">Míticas Plus</li>
+            <li className="nav-item"><NavLink to={"/"}>Inicio</NavLink> </li>
+            <li className="nav-item"><NavLink to={`/categorias/1`}>Miticas Plus</NavLink></li>
+            <li className="nav-item"><NavLink to={`/categorias/2`}>Raids</NavLink></li>
+            <li className="nav-item"><NavLink to={`/categorias/3`}>Servicios</NavLink></li>       
           </ul>
         </nav>
         <CartWidget />

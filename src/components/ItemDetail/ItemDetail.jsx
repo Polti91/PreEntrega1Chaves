@@ -1,9 +1,9 @@
-import React from "react";
+import "./ItemDetail.css";
 import Contador from "../Contador/Contador";
 
 const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
   return (
-    <div>
+    <div className="flexcss">
       <div className="card m-3" style={{ width: "18rem" }}>
         <img src={img} className="card-img-top mt-1 imgProducto" alt={nombre} />
         <div className="card-body flex-row m-3">
