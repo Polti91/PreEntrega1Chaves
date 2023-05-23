@@ -21,7 +21,7 @@ const NavBar = () => {
         <nav className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav gap-3 ms-5">
             <li className="nav-item"><NavLink to={"/"}>Inicio</NavLink> </li>
-            <li className="nav-item"><NavLink to={`/categorias/1`}>Miticas Plus</NavLink></li>
+            <li className="nav-item"><NavLink to={`/categorias/1`}>Míticas Plus</NavLink></li>
             <li className="nav-item"><NavLink to={`/categorias/2`}>Raids</NavLink></li>
             <li className="nav-item"><NavLink to={`/categorias/3`}>Servicios</NavLink></li>       
           </ul>
