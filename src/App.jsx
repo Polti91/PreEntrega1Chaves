@@ -8,15 +8,17 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<ItemListContainer/>}/>
-        <Route exact path='/categorias/:categoryId' element={<ItemListContainer/>}/>
-        <Route exact path='/item/:itemId' element={<ItemDetailContainer/>}/>
-      </Routes>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route
+            exact
+            path="/categorias/:categoryId"
+            element={<ItemListContainer />}
+          />
+          <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
+        </Routes>
       </BrowserRouter>
-    
-
     </>
   );
 }

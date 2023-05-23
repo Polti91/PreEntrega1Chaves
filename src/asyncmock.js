@@ -6,7 +6,7 @@ const productos = [
     id: "1",
     img: "../imagenes/sombraluna.jpg",
     stock: 10,
-    category: "1"
+    category: "1",
   },
   {
     nombre: "Boveda Azur",
@@ -15,7 +15,7 @@ const productos = [
     id: "2",
     img: "../imagenes/bovedaazur.jpg",
     stock: 10,
-    category: "1"
+    category: "1",
   },
   {
     nombre: "Corte de Estrellas",
@@ -24,7 +24,7 @@ const productos = [
     id: "3",
     img: "../imagenes/cortedeestrellas.jpg",
     stock: 10,
-    category: "1"
+    category: "1",
   },
   {
     nombre: "Salones del valor",
@@ -33,7 +33,7 @@ const productos = [
     id: "4",
     img: "../imagenes/salones.jpg",
     stock: 10,
-    category: "1"
+    category: "1",
   },
   {
     nombre: "Vault",
@@ -43,7 +43,7 @@ const productos = [
     id: "5",
     img: "../imagenes/encarnaciones.jpg",
     stock: 10,
-    category: "2"
+    category: "2",
   },
   {
     nombre: "Aberrus",
@@ -53,7 +53,7 @@ const productos = [
     id: "6",
     img: "../imagenes/aberrus.jpg",
     stock: 10,
-    category: "2"
+    category: "2",
   },
   {
     nombre: "Oro",
@@ -63,33 +63,35 @@ const productos = [
     id: "7",
     img: "../imagenes/oro.jpg",
     stock: 10,
-    category: "3"
-  }
+    category: "3",
+  },
 ];
 
 export const getProductos = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos);
-      console.log(productos)
+      console.log(productos);
     }, 100);
   });
 };
 
 export const getItem = (id) => {
-    return new Promise(resolve => {
-        setTimeout( () => {
-            const product = productos.find(prod => prod.id === id);
-            resolve(product);
-        }, 100);
-    });
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const product = productos.find((prod) => prod.id === id);
+      resolve(product);
+    }, 100);
+  });
 };
 
 export const getProductsByCategory = (categoryId) => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        const productsByCategory = productos.filter(prod => prod.category === categoryId);
-        resolve(productsByCategory);
-      }, 100);
-    });
-  };
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const productsByCategory = productos.filter(
+        (prod) => prod.category === categoryId
+      );
+      resolve(productsByCategory);
+    }, 100);
+  });
+};
