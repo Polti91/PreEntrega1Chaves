@@ -3,16 +3,14 @@ import "./Item.css";
 const Item = ({id, nombre, precio, stock, img, description}) => {
   return (
     <div>
-      <div className="card" style={{ width: "18rem" }}>
-        <img src={img} className="card-img-top mt-1" alt={nombre} />
-        <div className="card-body">
-          <h5 className="card-title">{nombre}</h5>
-          <p className="card-text">Descripción: {description}</p>
-          <p className="card-text">ID: {id}</p>
-          <p className="card-text">Precio: {precio}</p>
-          <p className="card-text">Stock disponible: {stock}</p>
-          <button href="#" className="btn btn-primary">
-            Ver
+      <div className="card m-3" style={{ width: "18rem" }}>
+        <img src={img} className="card-img-top mt-1 imgProducto" alt={nombre} />
+        <div className="card-body flex-row m-3">
+          <h5 className="card-title text-center">{nombre}</h5>
+          <p className="card-text text-center m-1">ID: {id}</p>
+          <p className="card-text text-center m-1">Precio: {precio}</p>
+          <button className="btn btn-primary d-grid gap-2 col-6 mx-auto">
+            Detalles
           </button>
         </div>
       </div>

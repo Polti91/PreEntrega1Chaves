@@ -1,6 +1,6 @@
 const productos = [
   {
-    nombre: "Cementerios Sombraluna",
+    nombre: "Shadowmoon",
     precio: 25,
     description: "Mítica plus +20",
     id: 1,
@@ -32,7 +32,7 @@ const productos = [
     stock: 10
   },
   {
-    nombre: "Bóveda de las encarnaciones",
+    nombre: "Vault",
     description:
       "Banda en dificultad heróica, ganá todos los logros de la temporada!",
     precio: 40,
@@ -67,3 +67,12 @@ export const getProductos = () => {
     }, 2000);
   });
 };
+
+export const getItem = (id) => {
+    return new Promise(resolve => {
+        setTimeout( () => {
+            const product = productos.find(prod => prod.id === id);
+            resolve(product);
+        }, 2000)
+    })
+}
