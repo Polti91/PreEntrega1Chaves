@@ -1,14 +1,20 @@
-import './CartWidget.css';
-import BagCarrito from '../../assets/imagenes/bag.png'
+import "./CartWidget.css";
+
 const CartWidget = () => {
   return (
     <>
-    <div className='flex'>
-        <img className='imagenCarrito' src={BagCarrito} alt="Carrito de Compras" />
-           </div>
-           <div><p>5</p></div>
-           </>
-  )
-}
+      <div className="flex">
+        <img
+          className="imagenCarrito"
+          src="../../../public/imagenes/bag.png"
+          alt="Carrito de Compras"
+        />
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+    </>
+  );
+};
 
-export default CartWidget
+export default CartWidget;

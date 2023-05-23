@@ -16,6 +16,10 @@ const Contador = ({ stock, inicial }) => {
     }
   };
 
+  const adicionar = () => {
+    console.log(`${contador} weas agregadas al carrito.`);
+  };
+
   return (
     <div>
       <button onClick={disminuirContador} className="btn btn-primary">
@@ -27,6 +31,9 @@ const Contador = ({ stock, inicial }) => {
         {" "}
         +{" "}
       </button>
+      <br />
+
+      <button onClick={adicionar}>Agregar</button>
     </div>
   );
 };
