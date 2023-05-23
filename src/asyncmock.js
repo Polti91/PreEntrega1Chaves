@@ -72,7 +72,7 @@ export const getProductos = () => {
     setTimeout(() => {
       resolve(productos);
       console.log(productos);
-    }, 100);
+    }, 2000);
   });
 };
 
@@ -81,7 +81,7 @@ export const getItem = (id) => {
     setTimeout(() => {
       const product = productos.find((prod) => prod.id === id);
       resolve(product);
-    }, 100);
+    }, 2000);
   });
 };
 
@@ -92,6 +92,6 @@ export const getProductsByCategory = (categoryId) => {
         (prod) => prod.category === categoryId
       );
       resolve(productsByCategory);
-    }, 100);
+    }, 2000);
   });
 };
