@@ -1,7 +1,7 @@
 import "./Contador.css";
 import { useState } from "react";
 
-const Contador = ({ stockTotal, inicial }) => {
+const Contador = ({ stockTotal, inicial, adicionarItem }) => {
   const [contador, setContador] = useState(inicial);
 
   const aumentarContador = () => {
@@ -16,11 +16,12 @@ const Contador = ({ stockTotal, inicial }) => {
     }
   };
 
-  const adicionar = () => {
-    console.log(`${contador} weas agregadas al carrito.`);
-  };
+  //const adicionar = () => {
+  //  console.log(`${contador} weas agregadas al carrito.`);
+  //};
 
   return (
+    <>
     <div className="text-center">
       <button onClick={disminuirContador} className="btn btn-primary">
         {" "}
@@ -31,15 +32,16 @@ const Contador = ({ stockTotal, inicial }) => {
         {" "}
         +{" "}
       </button>
-      <br />
+      </div>
 
       <button
-        onClick={adicionar}
+        onClick={()=> adicionarItem(contador)}
         className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1"
       >
         Agregar al carrito
       </button>
-    </div>
+    
+    </>
   );
 };
 
