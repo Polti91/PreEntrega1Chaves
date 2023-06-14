@@ -4,17 +4,31 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
+import { toast } from "react-toastify";
+
+const notify = () =>
+  toast.success("Agregado con éxito al Carrito de Compras.", {
+    position: "top-center",
+    autoClose: 2500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  });
 
 const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
   const [adicionar, setAdicionar] = useState(0);
 
-  const {addProduct} = useContext(CartContext);
+  const { addProduct } = useContext(CartContext);
 
   const handlerAdicionar = (qty) => {
     setAdicionar(qty);
-    
-    const item = {id, nombre, precio};
-    addProduct(item, qty)
+
+    const item = { id, nombre, precio };
+    addProduct(item, qty);
+    notify();
   };
   return (
     <div className="flexcss">

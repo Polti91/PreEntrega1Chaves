@@ -71,7 +71,7 @@ export const getProductos = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos);
-    }, 2000);
+    }, 500);
   });
 };
 
@@ -80,7 +80,7 @@ export const getItem = (id) => {
     setTimeout(() => {
       const product = productos.find((prod) => prod.id === id);
       resolve(product);
-    }, 2000);
+    }, 500);
   });
 };
 
@@ -91,6 +91,6 @@ export const getProductsByCategory = (categoryId) => {
         (prod) => prod.category === categoryId
       );
       resolve(productsByCategory);
-    }, 2000);
+    }, 500);
   });
 };
