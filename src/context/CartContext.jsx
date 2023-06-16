@@ -1,16 +1,25 @@
 import { useState, createContext } from "react";
 
-export const CartContext = createContext({ cart: [] });
+export const CartContext = createContext({
+  cart: [],
+  total: 0,
+  totalQty: 0,
+});
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
+
+  const [total, setTotal] = useState(0);
+
+  const [totalQty, setTotalQty] = useState(0);
 
   const addProduct = (item, qty) => {
     const productExist = cart.find((prod) => prod.item.id === item.id);
 
     if (!productExist) {
       setCart((prev) => [...prev, { item, qty }]);
+      setTotalQty((prev) => prev + qty);
+      setTotal((prev) => prev + item.precio * qty);
     } else {
       const actualCart = cart.map((prod) => {
         if (prod.item.id === item.id) {
@@ -20,21 +29,28 @@ export const CartProvider = ({ children }) => {
         }
       });
       setCart(actualCart);
+      setTotalQty((prev) => prev - qty);
+      setTotal((prev) => prev + item.precio * qty);
     }
   };
 
   const deleteProduct = (id) => {
-    const actualCart = cart.filter((prod) => prod.id !== id);
+    const deletedProduct = cart.find((prod) => prod.item.id === id);
+    const actualCart = cart.filter((prod) => prod.item.id !== id);
     setCart(actualCart);
+    setTotalQty((prev) => prev - deletedProduct.qty);
+    setTotal((prev) => prev - (deletedProduct.item.precio * deletedProduct.qty));
   };
 
   const clearCart = () => {
     setCart([]);
+    setTotalQty(0);
+    setTotal(0);
   };
 
   return (
     <CartContext.Provider
-      value={{ cart, addProduct, deleteProduct, clearCart }}
+      value={{ cart, total, totalQty, addProduct, deleteProduct, clearCart }}
     >
       {children}
     </CartContext.Provider>
