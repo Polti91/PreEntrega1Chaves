@@ -1,0 +1,8 @@
+.form {
+    width: 500px;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
