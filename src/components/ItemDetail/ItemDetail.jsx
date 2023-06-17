@@ -48,7 +48,7 @@ const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
             <Link to="/cart">
               {" "}
               <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
-                Finalizar compra
+                Ver carrito
               </button>
             </Link>
           ) : (

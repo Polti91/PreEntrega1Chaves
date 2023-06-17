@@ -9,20 +9,27 @@ const Cart = () => {
     if(totalQty === 0) {
         return (
             <>
-            <h2>El carrito está vacío.</h2>
-            <Link to='/'>Ver productos</Link>
+            <h2 className="d-grid gap-2 col-2 mx-auto m-5">El carrito está vacío.</h2>
+            <Link to='/'><button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-5">Ver productos</button></Link>
             </>
         )
     } 
   return (
     <>
-    
-        {cart.map((item) => <CartItem key={item.id} {...item} />)}
-        <h3>Total: ${total}</h3>
-        <h3>Cantidad total: {totalQty}</h3>
-        <button onClick={()=> clearCart()}>Vaciar carrito</button>
-        <Link to='/checkout'>Finalizar compra</Link>
-        
+    <div className="container">
+    <div className="container d-flex justify-content-evenly flex-wrap mt-2">
+    {cart.map((items) => <CartItem key={items.id} {...items} />)}
+    </div>
+      <div className="mx-auto mt-4">
+
+        <h3 className="d-grid gap-2 col-2 mx-auto m-1">Productos: {totalQty}</h3>
+        <h3 className="d-grid gap-2 col-2 mx-auto m-1">Total: ${total}</h3>
+        <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1" onClick={()=> clearCart()}>Vaciar carrito</button>
+        <Link to='/checkout'>
+          <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">Finalizar compra</button>
+          </Link>
+        </div>
+        </div>
         </>
   )
 

@@ -57,6 +57,11 @@ const CheckOut = () => {
               text: `Orden N°: ${docRef.id}`,
               icon: "success",
             });
+            setName("");
+setLastName("");
+setTel("");
+setEmail("");
+setEmailConfirmation("");
                 })
         .catch((error)=>{
             setError("Error al crear orden", error);
@@ -71,11 +76,13 @@ const CheckOut = () => {
             <h2 className="mx-auto">Confirmá tu orden</h2>
             <form className="mx-auto">
                 {cart.map((product)=>(
+                    <div className='border border-3 mb-3'>
                     <div key={product.item.id}>
                         <p>
                             {product.item.nombre} x {product.qty}
                         </p>
                         <p>Precio $: {product.item.precio}</p>
+                    </div>
                     </div>
                 ))}
             </form>
