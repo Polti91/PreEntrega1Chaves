@@ -44,21 +44,21 @@ const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
           <p className="card-text text-center m-1">ID: {id}</p>
           <p className="card-text text-center m-1">Precio: {precio}</p>
           <p className="card-text text-center m-1">Stock {stock}</p>
-          {adicionar > 0 ? ( <div>
-            <Link to="/cart">
-              {" "}
-              <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
-                Ver carrito
-              </button>
-            </Link>
-            <Link to="/">
-            {" "}
-            <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
-              Seguir comprando
-            </button>
-          </Link>
-          </div>
-            
+          {adicionar > 0 ? (
+            <div>
+              <Link to="/cart">
+                {" "}
+                <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
+                  Ver carrito
+                </button>
+              </Link>
+              <Link to="/">
+                {" "}
+                <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
+                  Seguir comprando
+                </button>
+              </Link>
+            </div>
           ) : (
             <Contador
               stockTotal={stock}

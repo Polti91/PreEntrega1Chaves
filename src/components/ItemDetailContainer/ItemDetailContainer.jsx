@@ -12,12 +12,12 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const nuevoDoc = doc(db, "productos", itemId);
     getDoc(nuevoDoc)
-    .then( response => {
-      const data = response.data();
-      const newProduct = {id: response.id, ...data}
-      setProduct(newProduct);
-    })
-    .catch((error)=> console.log(error))
+      .then((response) => {
+        const data = response.data();
+        const newProduct = { id: response.id, ...data };
+        setProduct(newProduct);
+      })
+      .catch((error) => console.log(error));
   }, [itemId]);
 
   return (

@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
     const actualCart = cart.filter((prod) => prod.item.id !== id);
     setCart(actualCart);
     setTotalQty((prev) => prev - deletedProduct.qty);
-    setTotal((prev) => prev - (deletedProduct.item.precio * deletedProduct.qty));
+    setTotal((prev) => prev - deletedProduct.item.precio * deletedProduct.qty);
   };
 
   const clearCart = () => {

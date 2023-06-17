@@ -5,7 +5,11 @@ const Item = ({ id, nombre, precio, img, category }) => {
   return (
     <div>
       <div className="card m-3" style={{ width: "19rem" }}>
-        <img src={img} className="card-img-top mt-1 imgProducto mx-auto" alt={nombre} />
+        <img
+          src={img}
+          className="card-img-top mt-1 imgProducto mx-auto"
+          alt={nombre}
+        />
         <div className="card-body flex-row m-3">
           <h5 className="card-title text-center">{nombre}</h5>
           <p className="card-text text-center m-1">ID: {id}</p>
