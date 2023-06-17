@@ -74,7 +74,7 @@ setEmailConfirmation("");
     <>
     <div className="container form">
             <h2 className="mx-auto">Confirmá tu orden</h2>
-            <form className="mx-auto">
+            <form className="mx-auto d-grid gap-2 col-6 mx-auto m-1">
                 {cart.map((product)=>(
                     <div className='border border-3 mb-3'>
                     <div key={product.item.id}>
@@ -86,7 +86,7 @@ setEmailConfirmation("");
                     </div>
                 ))}
             </form>
-          <form className="mx-auto">
+          <form className="mx-auto d-grid gap-2 col-6 mx-auto m-1">
           <div className="form-floating mb-3">
         <input type="text" className="form-control" id="floatingInput" placeholder="Pablo" value={name} onChange={(e)=>setName(e.target.value)}/>
         <label htmlFor="floatingInput">Nombre</label>
