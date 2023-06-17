@@ -37,7 +37,7 @@ const Contador = ({ stockTotal, inicial, adicionarItem }) => {
         onClick={() => adicionarItem(contador)}
         className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1"
       >
-        Agregar al carrito
+        Comprar
       </button>
     </>
   );

@@ -55,7 +55,7 @@ const ItemDetail = ({ id, nombre, precio, stock, img, description }) => {
               <Link to="/">
                 {" "}
                 <button className="btn btn-primary d-grid gap-2 col-6 mx-auto m-1">
-                  Seguir comprando
+                  Ver más
                 </button>
               </Link>
             </div>
