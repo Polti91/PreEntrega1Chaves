@@ -15,10 +15,6 @@ const Contador = ({ stockTotal, inicial, adicionarItem }) => {
     }
   };
 
-  //const adicionar = () => {
-  //  console.log(`${contador} weas agregadas al carrito.`);
-  //};
-
   return (
     <>
       <div className="text-center">
