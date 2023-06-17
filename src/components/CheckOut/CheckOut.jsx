@@ -3,7 +3,8 @@ import "./CheckOut.css";
 import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import {db} from "../../services/config"
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import swal from 'sweetalert';
 
 
 const CheckOut = () => {
@@ -42,7 +43,8 @@ const CheckOut = () => {
             name,
             lastName,
             tel,
-            email
+            email,
+            date: serverTimestamp()
         };
 
         addDoc(collection(db, "orders"), order)
@@ -50,7 +52,12 @@ const CheckOut = () => {
             setOrderId(docRef.id);
             clearCart();
             setError("");
-        })
+            swal({
+              title: "¡Compra realizada con éxito!",
+              text: `Orden N°: ${docRef.id}`,
+              icon: "success",
+            });
+                })
         .catch((error)=>{
             setError("Error al crear orden", error);
         })
@@ -97,11 +104,6 @@ const CheckOut = () => {
       <button type="button" className="btn btn-success" onClick={handlerForm}>Finalizar</button>
 
       </form>
-      {
-        orderId && (
-            <strong>¡Compra realizada! El número de orden es: {orderId}</strong>
-        )
-      }
       </div>
     </>
   )
